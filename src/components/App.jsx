@@ -1,16 +1,22 @@
+import { Route, Routes } from 'react-router-dom';
+import { Layout } from './Layout/Layout';
+import { GlobalStyle } from './GlobalStyle';
+import TopMovies from './TopMovies/TopMovies'
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+    <Routes>
+
+      <Route path="/" element={<Layout />}>
+           
+          <Route path="/" element={<TopMovies/>} > 
+          {/* <Route path=":invoiceId" element={<InvoiceDetails />} /> */}
+          </Route>
+          <Route path="movies" element={<div>Dashboard</div>}/>
+      </Route>
+    </Routes>
+    <GlobalStyle />
+    </>
   );
 };
