@@ -1,7 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
+import { lazy } from 'react';
 import { Layout } from './Layout/Layout';
 import { GlobalStyle } from './GlobalStyle';
-import TopMovies from './TopMovies/TopMovies'
+const TopMovies = lazy(() => import("./TopMovies/TopMovies"))
+const ResultFilms = lazy(() => import("./SearchFilm/ResultFilms"))
+const FilmDetails = lazy(() => import("./FilmDetails/FilmDetails"))
+const Cast = lazy(() => import("./Cast/Cast"))
+const Reviews = lazy(() => import("./Reviews/Reviews"))
 
 export const App = () => {
   return (
@@ -9,11 +14,15 @@ export const App = () => {
     <Routes>
 
       <Route path="/" element={<Layout />}>
-           
-          <Route path="/" element={<TopMovies/>} > 
-          {/* <Route path=":invoiceId" element={<InvoiceDetails />} /> */}
+
+          <Route index element={<TopMovies/>}/> 
+          
+          <Route path="movies" element={<ResultFilms/>}/>
+          <Route path="movies/:id" element={<FilmDetails />}>
+            <Route path="cast" element={<Cast/>}/>
+            <Route path="reviews" element={<Reviews/>}/>
+
           </Route>
-          <Route path="movies" element={<div>Dashboard</div>}/>
       </Route>
     </Routes>
     <GlobalStyle />

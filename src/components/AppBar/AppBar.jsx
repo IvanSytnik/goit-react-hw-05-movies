@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { Box } from '../Box/Box';
 import styled from 'styled-components';
 const navItems = [
-  { href: '/', text: 'Homepage'},
+  { href: '', text: 'Homepage'},
   { href: 'movies', text: 'Movies'}
 ];
 
