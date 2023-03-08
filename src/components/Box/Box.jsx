@@ -10,6 +10,7 @@ import {
   background,
   border,
   position,
+  margin,
 } from 'styled-system';
 
 export const Box = styled('div')(
@@ -22,5 +23,6 @@ export const Box = styled('div')(
   grid,
   background,
   border,
-  position
+  position,
+  margin
 );

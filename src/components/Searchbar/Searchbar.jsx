@@ -1,11 +1,14 @@
-
+import '../../index.css';
 
 const Searchbar= ({name, handleName, handleSubmit}) => {
     return(
-    <form className="SearchForm" onSubmit={handleSubmit}>
+    <form className="search-form" onSubmit={handleSubmit}>
         
         
-
+        <div class="search-form__input">
+        <label for="inputSearch" class="search-form__label label-hidden">
+                    Enter movie title to search
+                </label>
         <input
         className="SearchForm-input"
         type="text"
@@ -18,6 +21,7 @@ const Searchbar= ({name, handleName, handleSubmit}) => {
         <button type="submit" className="SearchForm-button">
             Search
         </button>
+        </div>
     </form>
    )
     

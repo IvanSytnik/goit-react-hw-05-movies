@@ -38,7 +38,7 @@ import Searchbar from "components/Searchbar/Searchbar";
   return (<>
   <div>
   <Searchbar name={word} handleName={handleQeury}  handleSubmit={handleSubmit}></Searchbar> 
-  <p>Name: {name}</p>
+  <p style={{textAlign:"center", margin: 15}}>Name: {name}</p>
   {product && (<FilmList location={location} products={product}/>) }
   <Suspense fallback={<div>Loading page...</div>}>
 
