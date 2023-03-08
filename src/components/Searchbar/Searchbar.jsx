@@ -6,9 +6,7 @@ const Searchbar= ({name, handleName, handleSubmit}) => {
         
         
         <div class="search-form__input">
-        <label for="inputSearch" class="search-form__label label-hidden">
-                    Enter movie title to search
-                </label>
+        
         <input
         className="SearchForm-input"
         type="text"

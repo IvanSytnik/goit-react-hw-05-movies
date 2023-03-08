@@ -46,10 +46,10 @@ import fetchDetails from "../FetchData/FetchDetails"
 
         </div>
         <ul key={"dop"}>
-          <li>
+        <li style={{color: "red"}}>
             <Link to={"cast"}>Cast</Link>
           </li>
-          <li>
+          <li style={{color: "red"}}>
             <Link to={"reviews"}>Reviews</Link>
           </li>
         </ul>

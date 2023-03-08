@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Container } from "./FilmList.styled";
  const FilmList = ({ products, location }) => {
   return (
     <ul class="cards__list">
